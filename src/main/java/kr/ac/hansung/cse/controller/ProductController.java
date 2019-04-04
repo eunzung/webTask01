@@ -29,7 +29,6 @@ public class ProductController { // controller -> service -> dao
 
 	@RequestMapping(value = "/products/viewProduct/{productId}", method = RequestMethod.GET)
 	public String viewProduct(@PathVariable int productId, Model model) {
-
 		Product product = productService.getProductById(productId); // product를 하나 읽어서
 		model.addAttribute("product", product); // model에 읽어오고
 		
